@@ -3,16 +3,22 @@
 ## This repository contains a project completed for Berkley AI ML course
 #####                                                  Author - [Lalitya Sawant]
 
-### **Overview**
-#### Sales Forecasting for Walmart dataset.
+### Project Title:  **Sales Forecasting for Walmart dataset**
 
+#### Executive summary:
 In this application, we'll delve into a Kaggle dataset containing sales information from Walmart.
 
-### **Problem Statement:**
-Sales forecasting poses a common challenge for many organizations, resulting in potential revenue loss and diminished profits. Understanding sales trends enables organizations to strategically order the necessary quantities of goods across various departments and locations.
+#### Rationale
+**Why should anyone care about this question?**
 
-### Business Benefits:
+Sales forecasting poses a common challenge for many organizations, resulting in potential revenue loss and diminished profits. 
 
+#### Research Question
+**What are you trying to answer?**
+
+Understanding sales trends enables organizations to strategically order the necessary quantities of goods across various departments and locations.
+
+#### Business Benefits:
 By leveraging AI/ML models to predict sales forecasts, organizations can achieve:
 
 1. **Optimized Inventory Management:**
@@ -35,8 +41,14 @@ By leveraging AI/ML models to predict sales forecasts, organizations can achieve
 
 7. **Competitive Edge:**
    - Proactive sales forecasting provides a competitive advantage by enabling organizations to stay ahead in the market with timely and precise responses to consumer demands.
+  
+#### Data Sources
+**What data will you use to answer your question?**
 
-**Solution notebook link:** [CapstoneProject_Berkley.ipynb: ](https://github.com/LalityaSawant/Berkley-ML-AI-CapstoneProject/blob/master/CapstoneProject_Berkley.ipynb)
+As mentioned earlier we will be using the Walmart sales dataset from [Kaggle](https://www.kaggle.com/datasets/aslanahmedov/walmart-sales-forecast/download?datasetVersionNumber=1)
+
+#### Methodology
+**What methods are you using to answer the question?**
 
 To achieve this, a comprehensive analysis of the dataset is imperative. It includes below steps:
 
@@ -48,9 +60,12 @@ To achieve this, a comprehensive analysis of the dataset is imperative. It inclu
 
 **Data Transformation:** Converting textual/boolean data into a format understandable by the predictive model.
 
-Once these preprocessing steps are accomplished, the subsequent task is to distribute the data in the training and testing set and then apply different algorithms to reach to an accurate prediction of the forecasts.
+Once these preprocessing steps are accomplished, the subsequent task is to distribute the data in the training and testing set and then apply different algorithms to reach an accurate prediction of the forecasts.
 
-### **Some insights on Data:**
+#### Results
+**What did your research find?**
+
+#### **Some insights on Data:**
 Original shape of data: (421570, 16)
 
 Int64Index: 421570 entries, 0 to 421569
@@ -79,7 +94,7 @@ memory usage: 51.9+ MB
 Shape of the data after data processing/cleanup: (420212, 11)
 
 
-## **Key Findings from Data Exploration:**
+#### **Key Findings from Data Exploration:**
 
 1. **Data Compilation:**
    - The data was initially provided in 4 separate CSV files.
@@ -110,7 +125,7 @@ Shape of the data after data processing/cleanup: (420212, 11)
 These insights provide a foundational understanding for our further analysis and decision-making processes.
 
 
-### **Further Data Processing Steps:**
+#### **Further Data Processing Steps:**
 
 1. **Feature Transformation:**
    - Addressed remaining categorical and ordinal fields requiring transformation for modeling.
@@ -119,7 +134,7 @@ These insights provide a foundational understanding for our further analysis and
    - Explored the correlation of features with weekly sales.
 
 
-### **Feture Selction:**
+#### **Feature Selection:**
 Upon executing Ridge Regression for feature selection, we obtained the following correlation coefficient data:
 | #   | Features              | Coefs           |
 | --- | --------------------- | --------------- |
@@ -162,7 +177,7 @@ Below is the output from the permutation_importance:
 | IsHoliday_False   | 14263.435      | 4812.539           |
 | IsHoliday_True    | 14263.435      | 4812.539           |
 
-### Time Series Analysis and Modeling
+#### Time Series Analysis and Modeling
 
 After performing time series decomposition and the augmented Dickey-Fuller test, we concluded that the data is nonstationary. Subsequent decomposition at weekly and monthly intervals revealed a repetitive pattern in the data.
 
@@ -175,5 +190,14 @@ For the final time series model, we utilized the auto_arima algorithm, identifyi
 **Total fit time:** 10.236 seconds
 
 
-### **Conclusion:**
-#### The predictions from the above model exhibit a slightly lower trend than the test data. Further tuning or exploring alternative algorithms may help achieve a closer alignment between the predictions and the test data.
+#### Outline of project
+- [CapstoneProject_Berkley.ipynb: ](https://github.com/LalityaSawant/Berkley-ML-AI-CapstoneProject/blob/master/CapstoneProject_Berkley.ipynb)
+
+
+#### Next steps
+**What suggestions do you have for next steps?**
+
+The predictions from the above model exhibit a slightly lower trend than the test data. Further tuning or exploring alternative algorithms may help achieve a closer alignment between the predictions and the test data.
+
+##### Contact and Further Information
+Author: Lalitya Sawant
