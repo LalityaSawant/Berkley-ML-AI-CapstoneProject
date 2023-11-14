@@ -1,15 +1,17 @@
-# Repository: Berkley-ML-AI-Assignment-3
+# Repository: Berkley-ML-AI-CapstoneProject
 
-## This repository contains an assignment completed for comparing the performance of the classifiers (k-nearest neighbors, logistic regression, decision trees, and support vector machines) on the marketing of bank products data collected over the telephone.
+## This repository contains a project completed for Berkley AI ML course
+#####                                                  Author - Lalitya Sawant
 
 ### **Overview**
+#### Sales Forecasting for Walmart dataset.
 
-In this application, we will explore a dataset from the UCI Machine Learning repository. The data is from a Portuguese banking institution and is a collection of the results of multiple marketing campaigns. Our goal is to compare the performance of 4 different classifiers (k-nearest neighbors, logistic regression, decision trees, and support vector machines) using this dataset.
+In this application, we will explore a dataset from Kaggle which holds walmart sales information.
 
 ### **Problem Statement:**
-The data is related to direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe to a term deposit (variable y). 
+Sales forecasting is a common problem for lot of organizations. This leads to loss of revenue generation and profits. Knowing the trend for the sales can help organizations to order for required quantity of good fordifferent departments and locations.
 
-**Solution notebook link:** [Practical_Application_Assignment_17_1.ipynb: ](https://github.com/LalityaSawant/Berkley-ML-AI-Assignments-3/blob/master/Practical_Application_Assignment_17_1.ipynb)
+**Solution notebook link:** [apstoneProject_Berkley.ipynb: ](https://github.com/LalityaSawant/Berkley-ML-AI-CapstoneProject/blob/master/CapstoneProject_Berkley.ipynb)
 
 To achieve this, a comprehensive analysis of the dataset is imperative. It includes below steps:
 
@@ -19,102 +21,136 @@ To achieve this, a comprehensive analysis of the dataset is imperative. It inclu
 
 **Bias Assessment:** Scrutinizing the dataset for any biases and implementing appropriate measures to address them.
 
-**Text Data Transformation:** Converting textual data into a format understandable by the predictive model.
+**Data Transformation:** Converting textual/bollean data into a format understandable by the predictive model.
 
-Once these preprocessing steps are accomplished, the subsequent task is to distribute the data in the training and testing set and then apply 4 different classifiers and compare their performance. I validated the performance by comparing the accuracy and time to train these models.
+Once these preprocessing steps are accomplished, the subsequent task is to distribute the data in the training and testing set and then apply different algorithms to reach to an accurate prediction of the forecasts. 
 
 ### **Some insights on Data:**
-Original shape of data: (4521, 17)
+Original shape of data: (421570, 16)
 
-RangeIndex: 4521 entries, 0 to 4520
-Data columns (total 17 columns):
-| #   |Column     |Non-Null Count  |Dtype |
-|---  |------     |--------------  |----- |
-| 0   |age        |4521 non-null   |int64 |
-| 1   |job        |4521 non-null   |object|
-| 2   |marital    |4521 non-null   |object|
-| 3   |education  |4521 non-null   |object|
-| 4   |default    |4521 non-null   |object|
-| 5   |balance    |4521 non-null   |int64 |
-| 6   |housing    |4521 non-null   |object|
-| 7   |loan       |4521 non-null   |object|
-| 8   |contact    |4521 non-null   |object|
-| 9   |day        |4521 non-null   |int64 |
-| 10  |month      |4521 non-null   |object|
-| 11  |duration   |4521 non-null   |int64 |
-| 12  |campaign   |4521 non-null   |int64 |
-| 13  |pdays      |4521 non-null   |int64 |
-| 14  |previous   |4521 non-null   |int64 |
-| 15  |poutcome   |4521 non-null   |object|
-| 16  |y          |4521 non-null   |object|
-dtypes: int64(7), object(10)
-memory usage: 600.6+ KB
+Int64Index: 421570 entries, 0 to 421569
+Data columns (total 16 columns):
+| #   | Column        | Non-Null Count | Dtype    |
+| --- | ------------- | -------------- | -------- |
+| 0   | Store         | 421570         | int64    |
+| 1   | Dept          | 421570         | int64    |
+| 2   | Date          | 421570         | object   |
+| 3   | Weekly_Sales  | 421570         | float64  |
+| 4   | IsHoliday     | 421570         | bool     |
+| 5   | Temperature   | 421570         | float64  |
+| 6   | Fuel_Price    | 421570         | float64  |
+| 7   | MarkDown1     | 150681         | float64  |
+| 8   | MarkDown2     | 111248         | float64  |
+| 9   | MarkDown3     | 137091         | float64  |
+| 10  | MarkDown4     | 134967         | float64  |
+| 11  | MarkDown5     | 151432         | float64  |
+| 12  | CPI           | 421570         | float64  |
+| 13  | Unemployment  | 421570         | float64  |
+| 14  | Type          | 421570         | object   |
+| 15  | Size          | 421570         | int64    |
+dtypes: bool(1), float64(10), int64(3), object(2)
+memory usage: 51.9+ MB
 
-
-## **Analysis Report:**                         
-#####                                                  Author - Lalitya Sawant
-## Which classifier performed better on this dataset?
-#### Accuracy
-| SMV Accuracy | LogisticReg Accuracy | DecisionTree Accuracy | KNN Accuracy |
-|--------------|-----------------------|-----------------------|--------------|
-| 0.890936     | 0.882093              | 0.866618              | 0.883567     |
-
-#### Training time taken:
-| SMV_train_time | LogisticReg_train_time | DecisionTree_train_time | KNN_train_time |
-|----------------|-------------------------|-------------------------|----------------|
-| 0.138083       | 0.009874                | 0.013814                | 0.002116       |
-
-### **Details:**
-#### KNN:
-Training time KNN: 0.0021157264709472656
-KNN accuracy: 0.8835666912306559
-              precision    recall  f1-score   support
-
-           0       0.89      0.99      0.94      1201
-           1       0.46      0.08      0.14       156
-
-    accuracy                           0.88      1357
-   macro avg       0.68      0.54      0.54      1357
-weighted avg       0.84      0.88      0.85      1357
-
-#### SVM:
-Training time SVM: 0.13808298110961914
-SVM accuracy is: 0.8909358879882093
-              precision    recall  f1-score   support
-
-           0       0.90      0.99      0.94      1201
-           1       0.65      0.11      0.19       156
-
-    accuracy                           0.89      1357
-   macro avg       0.77      0.55      0.56      1357
-weighted avg       0.87      0.89      0.85      1357
+Shape of the data after data processing/cleanup: (420212, 11)
 
 
-#### Logistic Regression:
-Training time Logistic Regression: 0.00987386703491211
-Logistic Regression accuracy is: 0.8820928518791452
-              precision    recall  f1-score   support
+## **Findings from the EDA:**                         
+# Key Findings from Data Exploration
 
-           0       0.90      0.98      0.94      1201
-           1       0.46      0.13      0.21       156
+1. **Data Compilation:**
+   - The data was initially provided in 4 separate CSV files.
+   - We merged the store, features, and train CSVs to create a comprehensive dataset.
 
-    accuracy                           0.88      1357
-   macro avg       0.68      0.56      0.57      1357
-weighted avg       0.85      0.88      0.85      1357
+2. **Data Quality Enhancement:**
+   - Identified and addressed null values in markdown columns by removing those columns.
+   - Ensured better data quality for subsequent analysis.
+
+3. **Sales Data Anomalies:**
+   - Detected and addressed rows with negative sales values, likely data anomalies.
+   - Removed such instances, maintaining the integrity of the dataset.
+
+4. **Key Attributes Impacting Sales:**
+   - Explored attributes like holidays, fuel price, unemployment, and temperature.
+
+5. **Holiday Analysis:**
+   - Categorized holidays into four types: Labor Day, Super Bowl, Thanksgiving, and Christmas.
+   - Thanksgiving showed a strong positive impact on sales, while Super Bowl had a moderate impact.
+   - Labor Day and Christmas did not exhibit a significant positive impact on sales.
+
+6. **Other Sales Influencers:**
+   - Explored factors beyond holidays, finding no clear positive or negative impact on sales.
+
+7. **Yearly Sales Trend:**
+   - Observed a consistent pattern of increased sales at the end of each year.
+
+These insights provide a foundational understanding for our further analysis and decision-making processes.
 
 
-#### Decision tree:
-Training time Decision tree: 0.013813972473144531
-Decision Tree accuracy is: 0.866617538688283
-              precision    recall  f1-score   support
+### **Further Data Processing Steps:**
 
-           0       0.92      0.93      0.92      1201
-           1       0.42      0.40      0.41       156
+1. **Feature Transformation:**
+   - Addressed remaining categorical and ordinal fields requiring transformation for modeling.
 
-    accuracy                           0.87      1357
-   macro avg       0.67      0.67      0.67      1357
-weighted avg       0.86      0.87      0.87      1357
+2. **Correlation Analysis:**
+   - Explored the correlation of features with weekly sales.
+
+
+### **Feture Selction:**
+Upon executing Ridge Regression for feature selection, we obtained the following correlation coefficient data:
+| #   | Features              | Coefs           |
+| --- | --------------------- | --------------- |
+| 3   | Size                  | 6111.455355     |
+| 1   | Dept                  | 3272.028832     |
+| 9   | Type_C                | 1379.949679     |
+| 5   | Month                 | 1168.625192     |
+| 2   | Fuel_Price            | 701.886808      |
+| 17  | Thanksgiving_True     | 341.183575      |
+| 18  | Christmas_False       | 206.217420      |
+| 14  | Labor_Day_False       | 94.529108       |
+| 13  | Super_Bowl_True        | 80.195029       |
+| 11  | IsHoliday_True         | 62.867514       |
+| 10  | IsHoliday_False        | -62.867514      |
+| 12  | Super_Bowl_False       | -80.195029      |
+| 15  | Labor_Day_True         | -94.529108      |
+| 19  | Christmas_True         | -206.217420     |
+| 16  | Thanksgiving_False     | -341.183575     |
+| 7   | Type_A                | -410.515532     |
+| 8   | Type_B                | -427.978958     |
+| 4   | Week                 | -430.756689     |
+| 6   | Year                 | -663.120183     |
+| 0   | Store                | -1681.637899    |
+
+
+Below is the output from the permutation_importance:
+| Feature           | Mean           | Standard Deviation |
+| ------------------ | -------------- | ------------------ |
+| Size              | 73663404.289   | 675128.606         |
+| Dept              | 23966202.892   | 296850.476         |
+| Store             | 5440509.582    | 179566.791         |
+| Type_C            | 4518730.235    | 145167.318         |
+| Month             | 884192.429     | 110500.216         |
+| Week              | 677551.526     | 40811.852          |
+| Type_B            | 478886.728     | 44116.877          |
+| Type_A            | 334070.412     | 46556.820          |
+| Fuel_Price        | 235328.534     | 51785.721          |
+| Super_Bowl_True   | 26413.466      | 10746.130          |
+| Super_Bowl_False  | 26413.466      | 10746.130          |
+| IsHoliday_False   | 14263.435      | 4812.539           |
+| IsHoliday_True    | 14263.435      | 4812.539           |
+
+### Time Series Analysis and Modeling
+
+After performing time series decomposition and the augmented Dickey-Fuller test, we concluded that the data is nonstationary. Subsequent decomposition at weekly and monthly intervals revealed a repetitive pattern in the data.
+
+To address nonstationarity, we applied difference, shift, and log algorithms. The differential data emerged as the most effective in achieving stationarity.
+
+For the final time series model, we utilized the auto_arima algorithm, identifying the following as the optimal model for predictions:
+
+**Best model:** ARIMA(3,0,2)(0,0,0)[1] intercept
+
+**Total fit time:** 10.236 seconds
+
 
 
 ### **Conclusion:**
-#### Comparing different models we can see that SVM gives a good accuracy over others but also the traning time taken in the most out of 4 models. On the other hand, KNN model takes the lowest time to train the model but the accuracy is low.
+#### The predictions from the above model exhibit a slightly lower trend than the test data. Further tuning or exploring alternative algorithms may help achieve a closer alignment between the predictions and the test data.
