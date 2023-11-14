@@ -1,17 +1,42 @@
 # Repository: Berkley-ML-AI-CapstoneProject
 
 ## This repository contains a project completed for Berkley AI ML course
-#####                                                  Author - Lalitya Sawant
+#####                                                  Author - [Lalitya Sawant]
 
 ### **Overview**
 #### Sales Forecasting for Walmart dataset.
 
-In this application, we will explore a dataset from Kaggle which holds walmart sales information.
+In this application, we'll delve into a Kaggle dataset containing sales information from Walmart.
 
 ### **Problem Statement:**
-Sales forecasting is a common problem for lot of organizations. This leads to loss of revenue generation and profits. Knowing the trend for the sales can help organizations to order for required quantity of good fordifferent departments and locations.
+Sales forecasting poses a common challenge for many organizations, resulting in potential revenue loss and diminished profits. Understanding sales trends enables organizations to strategically order the necessary quantities of goods across various departments and locations.
 
-**Solution notebook link:** [apstoneProject_Berkley.ipynb: ](https://github.com/LalityaSawant/Berkley-ML-AI-CapstoneProject/blob/master/CapstoneProject_Berkley.ipynb)
+### Business Benefits:
+
+By leveraging AI/ML models to predict sales forecasts, organizations can achieve:
+
+1. **Optimized Inventory Management:**
+   - Accurate predictions enable organizations to maintain optimal inventory levels, reducing excess stock or shortages.
+
+2. **Improved Supply Chain Efficiency:**
+   - Anticipating sales trends facilitates a more efficient and responsive supply chain, ensuring timely product availability.
+
+3. **Enhanced Financial Planning:**
+   - Reliable sales forecasts aid in developing robust financial plans, optimizing budget allocation and resource utilization.
+
+4. **Maximized Revenue Generation:**
+   - Strategic decision-making based on accurate sales predictions can lead to increased revenue and improved profitability.
+
+5. **Customer Satisfaction:**
+   - Meeting demand consistently enhances customer satisfaction by reducing out-of-stock instances and ensuring a positive shopping experience.
+
+6. **Data-Driven Decision Making:**
+   - Leveraging AI/ML models empowers organizations with data-driven insights, fostering informed decision-making across various business aspects.
+
+7. **Competitive Edge:**
+   - Proactive sales forecasting provides a competitive advantage by enabling organizations to stay ahead in the market with timely and precise responses to consumer demands.
+
+**Solution notebook link:** [CapstoneProject_Berkley.ipynb: ](https://github.com/LalityaSawant/Berkley-ML-AI-CapstoneProject/blob/master/CapstoneProject_Berkley.ipynb)
 
 To achieve this, a comprehensive analysis of the dataset is imperative. It includes below steps:
 
@@ -21,9 +46,9 @@ To achieve this, a comprehensive analysis of the dataset is imperative. It inclu
 
 **Bias Assessment:** Scrutinizing the dataset for any biases and implementing appropriate measures to address them.
 
-**Data Transformation:** Converting textual/bollean data into a format understandable by the predictive model.
+**Data Transformation:** Converting textual/boolean data into a format understandable by the predictive model.
 
-Once these preprocessing steps are accomplished, the subsequent task is to distribute the data in the training and testing set and then apply different algorithms to reach to an accurate prediction of the forecasts. 
+Once these preprocessing steps are accomplished, the subsequent task is to distribute the data in the training and testing set and then apply different algorithms to reach to an accurate prediction of the forecasts.
 
 ### **Some insights on Data:**
 Original shape of data: (421570, 16)
@@ -54,8 +79,7 @@ memory usage: 51.9+ MB
 Shape of the data after data processing/cleanup: (420212, 11)
 
 
-## **Findings from the EDA:**                         
-# Key Findings from Data Exploration
+## **Key Findings from Data Exploration:**
 
 1. **Data Compilation:**
    - The data was initially provided in 4 separate CSV files.
