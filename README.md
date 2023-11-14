@@ -11,8 +11,6 @@ In this application, we'll delve into a Kaggle dataset containing sales informat
 ### **Problem Statement:**
 Sales forecasting poses a common challenge for many organizations, resulting in potential revenue loss and diminished profits. Understanding sales trends enables organizations to strategically order the necessary quantities of goods across various departments and locations.
 
-### **Business Benefits:**
-
 ### Business Benefits:
 
 By leveraging AI/ML models to predict sales forecasts, organizations can achieve:
@@ -80,9 +78,8 @@ memory usage: 51.9+ MB
 
 Shape of the data after data processing/cleanup: (420212, 11)
 
-
-## **Findings from the EDA:**                         
-# Key Findings from Data Exploration
+            
+## **Key Findings from Data Exploration:**
 
 1. **Data Compilation:**
    - The data was initially provided in 4 separate CSV files.
