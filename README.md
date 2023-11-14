@@ -151,6 +151,5 @@ For the final time series model, we utilized the auto_arima algorithm, identifyi
 **Total fit time:** 10.236 seconds
 
 
-
 ### **Conclusion:**
 #### The predictions from the above model exhibit a slightly lower trend than the test data. Further tuning or exploring alternative algorithms may help achieve a closer alignment between the predictions and the test data.
